@@ -1,2 +1,2 @@
 # Reunion-Mobile-app
-Thsi project belongs to the group of: Adam, Bozhidar, Milosz
+This project has been created by Adam and belongs to the group of: Adam, Bozhidar, Milosz
