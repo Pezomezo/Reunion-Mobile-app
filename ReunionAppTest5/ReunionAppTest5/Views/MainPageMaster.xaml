@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReunionAppTest5.Views.MainPageMaster"
+             Title="Master">
+	<StackLayout BackgroundColor="#E9583D">
+		<Grid BackgroundColor="#E9583D">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Label Text="Only free events" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  IsEnabled="False"/>
+			<Switch x:Name="PriceSwitch" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" />
+			<Picker x:Name="AgePicker" Title="No age group selected" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" />
+			<Picker x:Name="LocationPicker" Title="No location selected" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" />
+			<DatePicker x:Name="DatePicker" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" />
+			<Button Text="Apply" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2"/>
+		</Grid>
+		<Image x:Name="ReunionImage" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
+	</StackLayout>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:local="clr-namespace:ReunionAppTest5.Behaviors"
+			 xmlns:local1="clr-namespace:ReunionAppTest5.Converters"
+			 x:Class="ReunionAppTest5.Views.MainPageDetail"
+             Title="Filters">
+	<ContentPage.Behaviors>
+		<local:ContentPageBehaviours EventName="Appearing" Command="{Binding InitializeListCommand}" />
+	</ContentPage.Behaviors>
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<local1:SelectedItemEventArgsToSelectedItemConverter x:Key="SelectedItemConverter" />
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<StackLayout Padding="10" BackgroundColor="Wheat" >
+		<ListView x:Name="EventsListView"  x:Uid="EventsListView" Style="{StaticResource ListViewStyle}" 
+				  HasUnevenRows="True" IsPullToRefreshEnabled="True"
+				  ItemsSource="{Binding MenuItems}" >
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell >
+						<Frame Style="{StaticResource FrameStyle}" >
+							<Grid>
+								<Grid.RowDefinitions>
+									<RowDefinition  Height="Auto"/>
+								</Grid.RowDefinitions>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="*" />
+									<ColumnDefinition Width="Auto" />
+									<ColumnDefinition Width="*" />
+
+
+								</Grid.ColumnDefinitions>
+								<Image Source="{Binding EventImage}" Grid.Row="0" Grid.Column="1" 
+									   Style="{StaticResource ImageStyle}"  />
+								<Label TextColor="OrangeRed" FontSize="35" FontAttributes="Bold" Text="{Binding Name}"
+									   Grid.Row="0" Grid.Column="1" Style="{StaticResource DataLabelStyle}" />
+							</Grid>
+						</Frame>
+
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+			<ListView.Behaviors>
+				<local:MyViewBehaviour EventName="ItemSelected" Command="{Binding ItemSelectedCommand}" Converter="{StaticResource SelectedItemConverter}" />
+			</ListView.Behaviors>
+		</ListView>
+	</StackLayout>
+</ContentPage> 

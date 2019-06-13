@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ReunionAppTest5.App">
+	<Application.Resources>
+		<!--This reource dictionary holds all the styles that are being used in the application-->
+		<ResourceDictionary>
+			<Style x:Key="buttonStyle" TargetType="Button">
+				<Setter Property="HorizontalOptions" Value="Center" />
+				<Setter Property="VerticalOptions" Value="CenterAndExpand" />
+			</Style>
+			<Style x:Key="BaseLabelStyle" TargetType="Label">
+				<Setter Property="HorizontalOptions" Value="Start"/>
+				<Setter Property="VerticalOptions" Value="CenterAndExpand" />
+			</Style>
+			<Style x:Key="DataLabelStyle" TargetType="Label" >
+				<Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+				<Setter Property="VerticalOptions" Value="CenterAndExpand" />
+			</Style>
+			<Style x:Key="ImageStyle" TargetType="Image">
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+				<Setter Property="VerticalOptions" Value="FillAndExpand" />
+			</Style>
+			<Style x:Key="StackLayoutStyle" TargetType="StackLayout" >
+				<Setter Property="BackgroundColor" Value="Wheat" />
+			</Style>
+			<Style x:Key="ListViewStyle" TargetType="ListView" >
+				<Setter Property="BackgroundColor" Value="Wheat" />
+			</Style>
+			<Style x:Key="FrameStyle" TargetType="Frame">
+				<Setter Property="BackgroundColor" Value="Black"/>
+				<Setter Property="Padding" Value="2"/>
+				<Setter Property="Margin" Value="1,5,1,5" />
+				<Setter Property="HasShadow" Value="False" />
+				<Setter Property="CornerRadius" Value="15" />
+			</Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>
